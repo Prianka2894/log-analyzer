@@ -1,11 +1,12 @@
+file_name = input("Enter log file name: ")
+
 error_count = 0
 warning_count = 0
 total_lines = 0
 
-with open("log.txt", "r") as file:
+with open(file_name, "r") as file:
     for line in file:
         total_lines += 1
-        line = line.strip()
 
         if "ERROR" in line:
             error_count += 1
